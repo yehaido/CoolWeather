@@ -35,19 +35,19 @@ public class County {
 		this.cityId = cityId;
 	}
 	
-	public String getProviceName(){
+	public String getCountyName(){
 		return countyName;
 	}
 
-	public void setProviceName(String countyName){
+	public void setCountyName(String countyName){
 		this.countyName = countyName;
 	}	
 	
-	public String getcountyCode(){
+	public String getCountyCode(){
 		return countyCode;
 	}
 
-	public void setId(String countyCode){
+	public void setCountycode(String countyCode){
 		this.countyCode = countyCode;
 	}
 }

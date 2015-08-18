@@ -38,7 +38,7 @@ public class Province {
 		return provinceCode;
 	}
 
-	public void setId(String provinceCode){
+	public void setProvinceCode(String provinceCode){
 		this.provinceCode = provinceCode;
 	}
 }

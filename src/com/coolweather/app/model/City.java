@@ -35,19 +35,19 @@ public class City {
 		this.provinceId = provinceId;
 	}
 	
-	public String getProviceName(){
+	public String getCityName(){
 		return cityName;
 	}
 
-	public void setProviceName(String cityName){
+	public void setCityName(String cityName){
 		this.cityName = cityName;
 	}	
 	
-	public String getcityCode(){
+	public String getCityCode(){
 		return cityCode;
 	}
 
-	public void setId(String cityCode){
+	public void setCityCode(String cityCode){
 		this.cityCode = cityCode;
 	}
 }
