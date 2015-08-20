@@ -1,6 +1,6 @@
 package com.coolweather.app.activity;
 
-import com.example.coolweather.R;
+import com.coolweather.app.R;
 import com.coolweather.app.db.CoolWeatherDB;
 import com.coolweather.app.model.City;
 import com.coolweather.app.model.County;
@@ -84,7 +84,7 @@ public class ChooseAreaActivity extends Activity {
     		for(Province p:provinceList){
     			dataList.add(p.getProviceName());
     		}
-    		adapter.setNotifyOnChange(true);
+    		adapter.notifyDataSetChanged();;
     		listView.setSelection(0);
     		titleText.setText("ÖÐ¹ú");
     		currentLevel = LEVEL_PROVINCE;
@@ -99,7 +99,7 @@ public class ChooseAreaActivity extends Activity {
     		for(City p:cityList){
     			dataList.add(p.getCityName());
     		}
-    		adapter.setNotifyOnChange(true);
+    		adapter.notifyDataSetChanged();
     		listView.setSelection(0);
     		titleText.setText(selectedProvince.getProviceName());
     		currentLevel = LEVEL_CITY;
@@ -114,10 +114,10 @@ public class ChooseAreaActivity extends Activity {
     		for(County p:countyList){
     			dataList.add(p.getCountyName());
     		}
-    		adapter.setNotifyOnChange(true);
+    		adapter.notifyDataSetChanged();
     		listView.setSelection(0);
     		titleText.setText(selectedCity.getCityName());
-    		currentLevel = LEVEL_CITY;
+    		currentLevel = LEVEL_COUNTY;
     	}else{
     		queryFromServer(selectedCity.getCityCode(),"county");
     	}
@@ -136,7 +136,7 @@ public class ChooseAreaActivity extends Activity {
     		@Override
     		public void onFinish(String response){
     			boolean result = false;
-    			if("provicne".equals(type)){
+    			if("province".equals(type)){
     				result = Utility.handleProvincesResponse(coolWeatherDB, response);
     			}else if("city".equals(type)){
     				result = Utility.handleCitiesResponse(coolWeatherDB, 
