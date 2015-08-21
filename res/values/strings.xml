@@ -6,4 +6,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_text">CoolWeather</string>
     <string name="list_view">Choose Area</string>
+    <string name="title_activity_weather">WeatherActivity</string>
+	<string name="switch_city">切换城市</string>
+	<string name="refresh_weather">刷新天气</string>
 </resources>

@@ -28,6 +28,7 @@ public class HttpUtil {
 					while((line = reader.readLine()) != null){
 						response.append(line);
 					}
+					System.out.print(response);
 					if(listener != null){
 						listener.onFinish(response.toString());
 					}
@@ -42,6 +43,16 @@ public class HttpUtil {
 				}
 			}
 		}).start();
+	}
+	
+	public void main(String args[]){
+		String address = "http://www.weather.com.cn/data/cityinfo/";
+		sendHttpRequest(address,new HttpCallbackListener(){
+			@Override
+			public void onFinish(String response){}
+			@Override
+			public void onError(Exception e){}
+		});
 	}
 
 }
